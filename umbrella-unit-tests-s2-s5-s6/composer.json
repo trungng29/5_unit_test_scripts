@@ -1,0 +1,15 @@
+{
+    "name": "umbrella/unit-tests-s2-s5-s6",
+    "description": "PHPUnit suite for PTIT Umbrella API — S2 Doctor, S5 Booking, S6 Service/Speciality/Room/Clinic (SQLite mock DB)",
+    "require-dev": {
+        "phpunit/phpunit": "^9.6"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "UmbrellaTests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

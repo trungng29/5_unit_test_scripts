@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.6/phpunit.xsd"
+         bootstrap="bootstrap.php"
+         colors="true"
+         failOnRisky="false"
+         failOnWarning="false">
+    <testsuites>
+        <testsuite name="S6_Service_Speciality_Room_Clinic">
+            <file>tests/S6ServiceSpecialityRoomClinicTest.php</file>
+        </testsuite>
+    </testsuites>
+
+    <coverage processUncoveredFiles="true">
+        <include>
+            <file>../PTIT-Do-An-Tot-Nghiep/api/app/controllers/SpecialitiesController.php</file>
+            <file>../PTIT-Do-An-Tot-Nghiep/api/app/controllers/SpecialityController.php</file>
+            <file>../PTIT-Do-An-Tot-Nghiep/api/app/controllers/ServicesController.php</file>
+            <file>../PTIT-Do-An-Tot-Nghiep/api/app/controllers/ServiceController.php</file>
+            <file>../PTIT-Do-An-Tot-Nghiep/api/app/controllers/RoomsController.php</file>
+            <file>../PTIT-Do-An-Tot-Nghiep/api/app/controllers/RoomController.php</file>
+            <file>../PTIT-Do-An-Tot-Nghiep/api/app/controllers/ClinicsController.php</file>
+            <file>../PTIT-Do-An-Tot-Nghiep/api/app/controllers/ClinicController.php</file>
+            <file>../PTIT-Do-An-Tot-Nghiep/api/app/helpers/common.helper.php</file>
+            <file>../PTIT-Do-An-Tot-Nghiep/api/app/core/Controller.php</file>
+        </include>
+        <exclude>
+            <directory suffix=".php">../PTIT-Do-An-Tot-Nghiep/api/vendor</directory>
+            <directory suffix=".php">vendor</directory>
+            <directory suffix=".php">tools</directory>
+            <directory suffix=".php">tests</directory>
+        </exclude>
+    </coverage>
+</phpunit>

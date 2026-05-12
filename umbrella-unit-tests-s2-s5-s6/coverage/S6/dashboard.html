@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for C:\laragon\www\PTIT-Do-An-Tot-Nghiep\api\app</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="_css/bootstrap.min.css?v=9.2.32" rel="stylesheet" type="text/css">
+  <link href="_css/nv.d3.min.css?v=9.2.32" rel="stylesheet" type="text/css">
+  <link href="_css/style.css?v=9.2.32" rel="stylesheet" type="text/css">
+  <link href="_css/custom.css" rel="stylesheet" type="text/css">
+ </head>
+ <body>
+  <header>
+   <div class="container-fluid">
+    <div class="row">
+     <div class="col-md-12">
+      <nav aria-label="breadcrumb">
+       <ol class="breadcrumb">
+         <li class="breadcrumb-item"><a href="index.html">C:\laragon\www\PTIT-Do-An-Tot-Nghiep\api\app</a></li>
+         <li class="breadcrumb-item active">(Dashboard)</li>
+
+       </ol>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container-fluid">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="core/Controller.php.html#5">Controller</a></td><td class="text-right">40%</td></tr>
+       <tr><td><a href="controllers/SpecialityController.php.html#2">SpecialityController</a></td><td class="text-right">55%</td></tr>
+       <tr><td><a href="controllers/ClinicController.php.html#2">ClinicController</a></td><td class="text-right">59%</td></tr>
+       <tr><td><a href="controllers/ServiceController.php.html#7">ServiceController</a></td><td class="text-right">69%</td></tr>
+       <tr><td><a href="controllers/ClinicsController.php.html#2">ClinicsController</a></td><td class="text-right">69%</td></tr>
+       <tr><td><a href="controllers/RoomController.php.html#2">RoomController</a></td><td class="text-right">69%</td></tr>
+       <tr><td><a href="controllers/RoomsController.php.html#5">RoomsController</a></td><td class="text-right">73%</td></tr>
+       <tr><td><a href="controllers/SpecialitiesController.php.html#5">SpecialitiesController</a></td><td class="text-right">79%</td></tr>
+       <tr><td><a href="controllers/ServicesController.php.html#8">ServicesController</a></td><td class="text-right">83%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="controllers/SpecialityController.php.html#2">SpecialityController</a></td><td class="text-right">141</td></tr>
+       <tr><td><a href="core/Controller.php.html#5">Controller</a></td><td class="text-right">79</td></tr>
+       <tr><td><a href="controllers/ServiceController.php.html#7">ServiceController</a></td><td class="text-right">73</td></tr>
+       <tr><td><a href="controllers/ClinicController.php.html#2">ClinicController</a></td><td class="text-right">70</td></tr>
+       <tr><td><a href="controllers/ClinicsController.php.html#2">ClinicsController</a></td><td class="text-right">53</td></tr>
+       <tr><td><a href="controllers/RoomController.php.html#2">RoomController</a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="controllers/RoomsController.php.html#5">RoomsController</a></td><td class="text-right">37</td></tr>
+       <tr><td><a href="controllers/SpecialitiesController.php.html#5">SpecialitiesController</a></td><td class="text-right">26</td></tr>
+       <tr><td><a href="controllers/ServicesController.php.html#8">ServicesController</a></td><td class="text-right">24</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="core/Controller.php.html#123"><abbr title="Controller::jsonecho">jsonecho</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="core/Controller.php.html#72"><abbr title="Controller::view">view</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/SpecialityController.php.html#245"><abbr title="SpecialityController::updateAvatar">updateAvatar</abbr></a></td><td class="text-right">25%</td></tr>
+       <tr><td><a href="controllers/ServiceController.php.html#272"><abbr title="ServiceController::updateAvatar">updateAvatar</abbr></a></td><td class="text-right">25%</td></tr>
+       <tr><td><a href="controllers/ClinicController.php.html#177"><abbr title="ClinicController::delete">delete</abbr></a></td><td class="text-right">39%</td></tr>
+       <tr><td><a href="controllers/RoomController.php.html#7"><abbr title="RoomController::process">process</abbr></a></td><td class="text-right">50%</td></tr>
+       <tr><td><a href="controllers/ClinicController.php.html#4"><abbr title="ClinicController::process">process</abbr></a></td><td class="text-right">50%</td></tr>
+       <tr><td><a href="controllers/ClinicsController.php.html#4"><abbr title="ClinicsController::process">process</abbr></a></td><td class="text-right">55%</td></tr>
+       <tr><td><a href="controllers/RoomsController.php.html#10"><abbr title="RoomsController::process">process</abbr></a></td><td class="text-right">60%</td></tr>
+       <tr><td><a href="controllers/SpecialitiesController.php.html#10"><abbr title="SpecialitiesController::process">process</abbr></a></td><td class="text-right">60%</td></tr>
+       <tr><td><a href="controllers/ServicesController.php.html#13"><abbr title="ServicesController::process">process</abbr></a></td><td class="text-right">60%</td></tr>
+       <tr><td><a href="controllers/ServiceController.php.html#12"><abbr title="ServiceController::process">process</abbr></a></td><td class="text-right">61%</td></tr>
+       <tr><td><a href="controllers/SpecialityController.php.html#7"><abbr title="SpecialityController::process">process</abbr></a></td><td class="text-right">61%</td></tr>
+       <tr><td><a href="core/Controller.php.html#38"><abbr title="Controller::model">model</abbr></a></td><td class="text-right">64%</td></tr>
+       <tr><td><a href="controllers/SpecialityController.php.html#176"><abbr title="SpecialityController::delete">delete</abbr></a></td><td class="text-right">64%</td></tr>
+       <tr><td><a href="controllers/ClinicController.php.html#90"><abbr title="ClinicController::update">update</abbr></a></td><td class="text-right">65%</td></tr>
+       <tr><td><a href="controllers/ClinicsController.php.html#30"><abbr title="ClinicsController::getAll">getAll</abbr></a></td><td class="text-right">65%</td></tr>
+       <tr><td><a href="controllers/SpecialitiesController.php.html#36"><abbr title="SpecialitiesController::getAll">getAll</abbr></a></td><td class="text-right">70%</td></tr>
+       <tr><td><a href="controllers/SpecialityController.php.html#102"><abbr title="SpecialityController::update">update</abbr></a></td><td class="text-right">70%</td></tr>
+       <tr><td><a href="controllers/RoomsController.php.html#37"><abbr title="RoomsController::getAll">getAll</abbr></a></td><td class="text-right">70%</td></tr>
+       <tr><td><a href="controllers/RoomController.php.html#183"><abbr title="RoomController::delete">delete</abbr></a></td><td class="text-right">71%</td></tr>
+       <tr><td><a href="controllers/RoomController.php.html#95"><abbr title="RoomController::update">update</abbr></a></td><td class="text-right">71%</td></tr>
+       <tr><td><a href="controllers/SpecialityController.php.html#52"><abbr title="SpecialityController::getById">getById</abbr></a></td><td class="text-right">71%</td></tr>
+       <tr><td><a href="controllers/RoomController.php.html#39"><abbr title="RoomController::getById">getById</abbr></a></td><td class="text-right">73%</td></tr>
+       <tr><td><a href="controllers/ServicesController.php.html#39"><abbr title="ServicesController::getAll">getAll</abbr></a></td><td class="text-right">76%</td></tr>
+       <tr><td><a href="controllers/ClinicsController.php.html#126"><abbr title="ClinicsController::save">save</abbr></a></td><td class="text-right">77%</td></tr>
+       <tr><td><a href="controllers/ClinicController.php.html#35"><abbr title="ClinicController::getById">getById</abbr></a></td><td class="text-right">78%</td></tr>
+       <tr><td><a href="controllers/RoomsController.php.html#154"><abbr title="RoomsController::save">save</abbr></a></td><td class="text-right">81%</td></tr>
+       <tr><td><a href="controllers/ServiceController.php.html#193"><abbr title="ServiceController::delete">delete</abbr></a></td><td class="text-right">88%</td></tr>
+       <tr><td><a href="controllers/ServiceController.php.html#118"><abbr title="ServiceController::update">update</abbr></a></td><td class="text-right">88%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="controllers/ServiceController.php.html#272"><abbr title="ServiceController::updateAvatar">updateAvatar</abbr></a></td><td class="text-right">51</td></tr>
+       <tr><td><a href="controllers/SpecialityController.php.html#245"><abbr title="SpecialityController::updateAvatar">updateAvatar</abbr></a></td><td class="text-right">51</td></tr>
+       <tr><td><a href="core/Controller.php.html#72"><abbr title="Controller::view">view</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="controllers/ClinicsController.php.html#30"><abbr title="ClinicsController::getAll">getAll</abbr></a></td><td class="text-right">26</td></tr>
+       <tr><td><a href="controllers/RoomsController.php.html#37"><abbr title="RoomsController::getAll">getAll</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="controllers/ClinicController.php.html#177"><abbr title="ClinicController::delete">delete</abbr></a></td><td class="text-right">17</td></tr>
+       <tr><td><a href="controllers/SpecialitiesController.php.html#36"><abbr title="SpecialitiesController::getAll">getAll</abbr></a></td><td class="text-right">15</td></tr>
+       <tr><td><a href="controllers/ServicesController.php.html#39"><abbr title="ServicesController::getAll">getAll</abbr></a></td><td class="text-right">13</td></tr>
+       <tr><td><a href="controllers/ClinicController.php.html#90"><abbr title="ClinicController::update">update</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="core/Controller.php.html#123"><abbr title="Controller::jsonecho">jsonecho</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="controllers/SpecialityController.php.html#7"><abbr title="SpecialityController::process">process</abbr></a></td><td class="text-right">9</td></tr>
+       <tr><td><a href="controllers/ServiceController.php.html#12"><abbr title="ServiceController::process">process</abbr></a></td><td class="text-right">9</td></tr>
+       <tr><td><a href="controllers/RoomController.php.html#95"><abbr title="RoomController::update">update</abbr></a></td><td class="text-right">9</td></tr>
+       <tr><td><a href="controllers/SpecialityController.php.html#176"><abbr title="SpecialityController::delete">delete</abbr></a></td><td class="text-right">9</td></tr>
+       <tr><td><a href="controllers/ClinicsController.php.html#126"><abbr title="ClinicsController::save">save</abbr></a></td><td class="text-right">8</td></tr>
+       <tr><td><a href="controllers/SpecialityController.php.html#102"><abbr title="SpecialityController::update">update</abbr></a></td><td class="text-right">8</td></tr>
+       <tr><td><a href="controllers/RoomController.php.html#183"><abbr title="RoomController::delete">delete</abbr></a></td><td class="text-right">8</td></tr>
+       <tr><td><a href="controllers/ClinicController.php.html#4"><abbr title="ClinicController::process">process</abbr></a></td><td class="text-right">8</td></tr>
+       <tr><td><a href="controllers/RoomController.php.html#7"><abbr title="RoomController::process">process</abbr></a></td><td class="text-right">8</td></tr>
+       <tr><td><a href="controllers/ServiceController.php.html#193"><abbr title="ServiceController::delete">delete</abbr></a></td><td class="text-right">8</td></tr>
+       <tr><td><a href="controllers/ClinicsController.php.html#4"><abbr title="ClinicsController::process">process</abbr></a></td><td class="text-right">7</td></tr>
+       <tr><td><a href="controllers/ServiceController.php.html#118"><abbr title="ServiceController::update">update</abbr></a></td><td class="text-right">7</td></tr>
+       <tr><td><a href="controllers/RoomsController.php.html#154"><abbr title="RoomsController::save">save</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="core/Controller.php.html#38"><abbr title="Controller::model">model</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="controllers/RoomController.php.html#39"><abbr title="RoomController::getById">getById</abbr></a></td><td class="text-right">5</td></tr>
+       <tr><td><a href="controllers/ClinicController.php.html#35"><abbr title="ClinicController::getById">getById</abbr></a></td><td class="text-right">5</td></tr>
+       <tr><td><a href="controllers/ServicesController.php.html#13"><abbr title="ServicesController::process">process</abbr></a></td><td class="text-right">5</td></tr>
+       <tr><td><a href="controllers/SpecialitiesController.php.html#10"><abbr title="SpecialitiesController::process">process</abbr></a></td><td class="text-right">5</td></tr>
+       <tr><td><a href="controllers/RoomsController.php.html#10"><abbr title="RoomsController::process">process</abbr></a></td><td class="text-right">5</td></tr>
+       <tr><td><a href="controllers/SpecialityController.php.html#52"><abbr title="SpecialityController::getById">getById</abbr></a></td><td class="text-right">4</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 9.2.32</a> using <a href="https://secure.php.net/" target="_top">PHP 7.4.33</a> and <a href="https://phpunit.de/">PHPUnit 9.6.34</a> at Tue May 12 19:06:24 +07 2026.</small>
+    </p>
+   </footer>
+  </div>
+  <script src="_js/jquery.min.js?v=9.2.32" type="text/javascript"></script>
+  <script src="_js/d3.min.js?v=9.2.32" type="text/javascript"></script>
+  <script src="_js/nv.d3.min.js?v=9.2.32" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([0,0,0,0,0,1,2,3,2,1,0,0], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([2,0,0,2,1,0,3,9,10,3,1,5], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[59.61538461538461,26,"<a href=\"controllers\/ClinicController.php.html#2\">ClinicController<\/a>"],[69.31818181818183,29,"<a href=\"controllers\/ClinicsController.php.html#2\">ClinicsController<\/a>"],[69.52380952380952,25,"<a href=\"controllers\/RoomController.php.html#2\">RoomController<\/a>"],[73,25,"<a href=\"controllers\/RoomsController.php.html#5\">RoomsController<\/a>"],[69.17808219178082,36,"<a href=\"controllers\/ServiceController.php.html#7\">ServiceController<\/a>"],[83.72093023255815,22,"<a href=\"controllers\/ServicesController.php.html#8\">ServicesController<\/a>"],[79.7872340425532,22,"<a href=\"controllers\/SpecialitiesController.php.html#5\">SpecialitiesController<\/a>"],[55.714285714285715,35,"<a href=\"controllers\/SpecialityController.php.html#2\">SpecialityController<\/a>"],[40,17,"<a href=\"core\/Controller.php.html#5\">Controller<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[50,5,"<a href=\"controllers\/ClinicController.php.html#4\">ClinicController::process<\/a>"],[78.26086956521739,5,"<a href=\"controllers\/ClinicController.php.html#35\">ClinicController::getById<\/a>"],[65.85365853658537,9,"<a href=\"controllers\/ClinicController.php.html#90\">ClinicController::update<\/a>"],[39.285714285714285,7,"<a href=\"controllers\/ClinicController.php.html#177\">ClinicController::delete<\/a>"],[55.55555555555556,5,"<a href=\"controllers\/ClinicsController.php.html#4\">ClinicsController::process<\/a>"],[65.9090909090909,16,"<a href=\"controllers\/ClinicsController.php.html#30\">ClinicsController::getAll<\/a>"],[77.14285714285715,8,"<a href=\"controllers\/ClinicsController.php.html#126\">ClinicsController::save<\/a>"],[50,5,"<a href=\"controllers\/RoomController.php.html#7\">RoomController::process<\/a>"],[73.91304347826086,5,"<a href=\"controllers\/RoomController.php.html#39\">RoomController::getById<\/a>"],[71.42857142857143,8,"<a href=\"controllers\/RoomController.php.html#95\">RoomController::update<\/a>"],[71.42857142857143,7,"<a href=\"controllers\/RoomController.php.html#183\">RoomController::delete<\/a>"],[60,4,"<a href=\"controllers\/RoomsController.php.html#10\">RoomsController::process<\/a>"],[70.6896551724138,15,"<a href=\"controllers\/RoomsController.php.html#37\">RoomsController::getAll<\/a>"],[81.25,6,"<a href=\"controllers\/RoomsController.php.html#154\">RoomsController::save<\/a>"],[61.111111111111114,7,"<a href=\"controllers\/ServiceController.php.html#12\">ServiceController::process<\/a>"],[95.23809523809523,4,"<a href=\"controllers\/ServiceController.php.html#56\">ServiceController::getById<\/a>"],[88.23529411764706,7,"<a href=\"controllers\/ServiceController.php.html#118\">ServiceController::update<\/a>"],[88.23529411764706,8,"<a href=\"controllers\/ServiceController.php.html#193\">ServiceController::delete<\/a>"],[25.64102564102564,10,"<a href=\"controllers\/ServiceController.php.html#272\">ServiceController::updateAvatar<\/a>"],[60,4,"<a href=\"controllers\/ServicesController.php.html#13\">ServicesController::process<\/a>"],[76.74418604651163,12,"<a href=\"controllers\/ServicesController.php.html#39\">ServicesController::getAll<\/a>"],[100,6,"<a href=\"controllers\/ServicesController.php.html#141\">ServicesController::save<\/a>"],[60,4,"<a href=\"controllers\/SpecialitiesController.php.html#10\">SpecialitiesController::process<\/a>"],[70.58823529411765,12,"<a href=\"controllers\/SpecialitiesController.php.html#36\">SpecialitiesController::getAll<\/a>"],[100,6,"<a href=\"controllers\/SpecialitiesController.php.html#148\">SpecialitiesController::save<\/a>"],[61.111111111111114,7,"<a href=\"controllers\/SpecialityController.php.html#7\">SpecialityController::process<\/a>"],[71.42857142857143,4,"<a href=\"controllers\/SpecialityController.php.html#52\">SpecialityController::getById<\/a>"],[70.58823529411765,7,"<a href=\"controllers\/SpecialityController.php.html#102\">SpecialityController::update<\/a>"],[64.28571428571429,7,"<a href=\"controllers\/SpecialityController.php.html#176\">SpecialityController::delete<\/a>"],[25.64102564102564,10,"<a href=\"controllers\/SpecialityController.php.html#245\">SpecialityController::updateAvatar<\/a>"],[100,1,"<a href=\"core\/Controller.php.html#25\">Controller::__construct<\/a>"],[64.28571428571429,5,"<a href=\"core\/Controller.php.html#38\">Controller::model<\/a>"],[0,5,"<a href=\"core\/Controller.php.html#72\">Controller::view<\/a>"],[100,1,"<a href=\"core\/Controller.php.html#101\">Controller::setVariable<\/a>"],[100,2,"<a href=\"core\/Controller.php.html#113\">Controller::getVariable<\/a>"],[0,3,"<a href=\"core\/Controller.php.html#123\">Controller::jsonecho<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>
