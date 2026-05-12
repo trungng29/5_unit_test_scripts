@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.6/phpunit.xsd"
+         bootstrap="bootstrap.php"
+         colors="true"
+         failOnRisky="false"
+         failOnWarning="false">
+    <testsuites>
+        <testsuite name="S5_Booking_Management">
+            <file>tests/S5BookingManagementTest.php</file>
+        </testsuite>
+    </testsuites>
+
+    <coverage processUncoveredFiles="true">
+        <include>
+            <file>../PTIT-Do-An-Tot-Nghiep/api/app/controllers/BookingsController.php</file>
+            <file>../PTIT-Do-An-Tot-Nghiep/api/app/controllers/BookingController.php</file>
+            <file>../PTIT-Do-An-Tot-Nghiep/api/app/controllers/PatientBookingsController.php</file>
+            <file>../PTIT-Do-An-Tot-Nghiep/api/app/controllers/PatientBookingController.php</file>
+            <file>../PTIT-Do-An-Tot-Nghiep/api/app/helpers/common.helper.php</file>
+            <file>../PTIT-Do-An-Tot-Nghiep/api/app/core/Controller.php</file>
+        </include>
+        <exclude>
+            <directory suffix=".php">../PTIT-Do-An-Tot-Nghiep/api/vendor</directory>
+            <directory suffix=".php">vendor</directory>
+            <directory suffix=".php">tools</directory>
+            <directory suffix=".php">tests</directory>
+        </exclude>
+    </coverage>
+</phpunit>
