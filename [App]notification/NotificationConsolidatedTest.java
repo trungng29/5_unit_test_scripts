@@ -6,6 +6,7 @@ import static org.mockito.Mockito.*;
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule;
 
+import com.example.do_an_tot_nghiep.Configuration.Constant;
 import com.example.do_an_tot_nghiep.Configuration.HTTPRequest;
 import com.example.do_an_tot_nghiep.Configuration.HTTPService;
 import com.example.do_an_tot_nghiep.Container.NotificationReadAll;
@@ -17,14 +18,11 @@ import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.ArgumentCaptor;
-import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockedStatic;
 import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 
-import java.io.IOException;
 import java.lang.reflect.Field;
 import java.util.HashMap;
 import java.util.Map;
@@ -53,10 +51,16 @@ public class NotificationConsolidatedTest {
     @Mock
     private HTTPRequest api;
 
+    private MockedStatic<Constant> constantMock;
     private MockedStatic<HTTPService> httpServiceMock;
 
     @Before
     public void setUp() {
+        // Fix: Mock Constant BEFORE HTTPService initialization to prevent NPE from android.os.Build
+        constantMock = Mockito.mockStatic(Constant.class);
+        constantMock.when(Constant::APP_PATH).thenReturn("http://localhost/");
+        constantMock.when(Constant::OPEN_WEATHER_MAP_PATH).thenReturn("http://localhost/");
+
         httpServiceMock = Mockito.mockStatic(HTTPService.class);
         httpServiceMock.when(HTTPService::getInstance).thenReturn(retrofit);
         doReturn(api).when(retrofit).create(HTTPRequest.class);
@@ -65,10 +69,15 @@ public class NotificationConsolidatedTest {
     @After
     public void tearDown() {
         if (httpServiceMock != null) httpServiceMock.close();
+        if (constantMock != null) constantMock.close();
     }
 
     // ------------------ Repository negative tests ------------------
 
+    /**
+     * TC_S9_J_01: repo_readAll_errorBody_setsNullAndStopsAnimation
+     * HTTP 401 -> animation stops, LiveData=null
+     */
     @Test
     public void repo_readAll_errorBody_setsNullAndStopsAnimation() {
         NotificationRepository repo = new NotificationRepository();
@@ -90,6 +99,10 @@ public class NotificationConsolidatedTest {
         assertNull(repo.getReadAllResponse().getValue());
     }
 
+    /**
+     * TC_S9_J_02: repo_readAll_onFailure_keepsNullAndStopsAnimation
+     * onFailure -> animation stops, LiveData=null
+     */
     @Test
     public void repo_readAll_onFailure_keepsNullAndStopsAnimation() {
         NotificationRepository repo = new NotificationRepository();
@@ -108,6 +121,10 @@ public class NotificationConsolidatedTest {
         assertNull(repo.getReadAllResponse().getValue());
     }
 
+    /**
+     * TC_S9_J_03: repo_readAll_successWithNullBody_setsNullAndStopsAnimation
+     * HTTP 200 body=null -> LiveData=null
+     */
     @Test
     public void repo_readAll_successWithNullBody_setsNullAndStopsAnimation() {
         NotificationRepository repo = new NotificationRepository();
@@ -127,6 +144,10 @@ public class NotificationConsolidatedTest {
         assertNull(repo.getReadAllResponse().getValue());
     }
 
+    /**
+     * TC_S9_J_04: repo_readAll_setsAnimationTrueImmediately
+     * readAll() immediately sets animation=true
+     */
     @Test
     public void repo_readAll_setsAnimationTrueImmediately() {
         NotificationRepository repo = new NotificationRepository();
@@ -138,7 +159,10 @@ public class NotificationConsolidatedTest {
         assertTrue(Boolean.TRUE.equals(repo.getAnimation().getValue()));
     }
 
-    // Additional negative case: malformed error body shouldn't crash
+    /**
+     * TC_S9_J_05: repo_readAll_malformedErrorBody_doesNotCrash
+     * Malformed JSON error body should not crash
+     */
     @Test
     public void repo_readAll_malformedErrorBody_doesNotCrash() {
         NotificationRepository repo = new NotificationRepository();
@@ -161,6 +185,10 @@ public class NotificationConsolidatedTest {
 
     // ------------------ ViewModel tests ------------------
 
+    /**
+     * TC_S9_J_06: vm_instantiate_createsRepositoryAndIdempotent
+     * instantiate() creates repo, idempotent
+     */
     @Test
     public void vm_instantiate_createsRepositoryAndIdempotent() throws Exception {
         NotificationViewModel vm = new NotificationViewModel();
@@ -178,6 +206,10 @@ public class NotificationConsolidatedTest {
         assertNotNull(f.get(vm));
     }
 
+    /**
+     * TC_S9_J_07: vm_readAll_delegatesAndBindsLiveData
+     * readAll() delegates and binds LiveData
+     */
     @Test
     public void vm_readAll_delegatesAndBindsLiveData() {
         NotificationRepository mockRepo = mock(NotificationRepository.class);
@@ -210,4 +242,3 @@ public class NotificationConsolidatedTest {
     }
 
 }
-
